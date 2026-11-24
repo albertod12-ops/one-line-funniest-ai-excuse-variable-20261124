@@ -7,7 +7,9 @@ import os
 LINE = "I treated the deadline as a variable and reassigned it to next Friday — in my defence, it compiled."
 
 # The bounty allows one line of at most 200 characters.
-# This line is 99 characters, 101 bytes UTF-8, no trailing newline.
+# This line is 99 characters, 101 bytes UTF-8, no trailing newline:
+# the em-dash counts as one character but three bytes, and the gate
+# counts characters, so the line is safely inside the limit either way.
 assert "\n" not in LINE and 1 <= len(LINE) <= 200
 
 
